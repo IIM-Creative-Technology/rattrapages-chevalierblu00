@@ -14,4 +14,4 @@ etape 4:
 -mise en place de la page archive qui permet d'afficher les ingrédients rentrer via le custom post type a l'ai de la meme video que l'étape 2
 
 etape 5:
--mise en place de la taxonomy dédiée dans le thème plus de modification de la page d'exemple pour verifier le bon fonctionnement a l'aide de cette video: https://grafikart.fr/tutoriels/wordpress-taxonomy-1266
+-mise en place de la taxonomy dédiée dans le thème plus de modification de la page d'exemple pour verifier le bon fonctionnement a l'aide de cette video: https://grafikart.fr/tutoriels/wordpress-taxonomy-1266 et de ces sites: https://developer.wordpress.org/reference/functions/wp_list_categories/ , https://wpfr.net/support/sujet/lister-taxonomy-et-custom-taxonomie/
