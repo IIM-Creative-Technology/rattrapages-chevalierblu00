@@ -48,6 +48,9 @@
 			)
 		);
 
+		// Ajoutez la fonction the_terms() ici
+		the_terms(get_the_ID(), 'ingrédients', '<li>', '</li><li>', '</li>');
+		
 		wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mongoo' ),

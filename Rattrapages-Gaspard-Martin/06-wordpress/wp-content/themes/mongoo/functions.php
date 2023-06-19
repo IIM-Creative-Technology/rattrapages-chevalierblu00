@@ -176,3 +176,24 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+function montheme_init() {
+	register_taxonomy('ingrédients', 'post', [
+		'labels' => [
+			'name' => 'ingrédients',
+			'singular_name' => 'ingrédient',
+			'plural'=> 'ingrédients',
+			'search_items' => 'recherhcer des ingrédients',
+			'all_items' => 'tous les ingrédients',
+			'edit_item' => "editer l'ingrédient",
+			'update_item' => "mettre a jour l'ingrédients",
+			'add_new_item' => 'ajouter un nouvelle ingrédient',
+			'new_item-name' => 'ajouter un nouvelle ingrédient',
+			'menu-name' => 'ingrédients',
+		],
+		'show_in_rest' => true,
+		'hierarchical' => true,
+		'show_admin_column' => true,
+	]);
+}
+
+add_action('init', 'montheme_init' );
