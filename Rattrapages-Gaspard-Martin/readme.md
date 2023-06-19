@@ -3,7 +3,7 @@ etape 1:
 -ajout du thème blanc underscores en s'aidant de ce site: https://wpmarmite.com/installer-theme-wordpress/
 
 etape 2: 
--ajout du plugin CPT UI, ACF
+-ajout du plugin CPT UI
 -mise en place du custom post type ingrédients et une taxonomy type a l'aide de cette video:https://www.youtube.com/watch?v=ETmvJi59JsE&ab_channel=JonathanCOLIN-MesTutosWP
 
 etape 3:
