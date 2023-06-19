@@ -9,3 +9,6 @@ etape 2:
 etape 3:
 -ajout du plugin ACF
 -mise en place des champs ACF couleur et prix a l'aide de cette video: https://www.youtube.com/watch?v=8yJqolGqWf0&ab_channel=AdrienGazaix
+
+etape 4:
+-mise en place de la page archive qui permet d'afficher les ingrédients rentrer via le custom post type a l'ai de la meme video que l'étape 2
