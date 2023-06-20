@@ -10,13 +10,13 @@
  */
 
 get_header();
-
-if (!function_exists('get_field')) return;
 ?>
 
 <main id="primary" class="site-main">
 
 	<?php
+	if (!function_exists('get_field')) return;
+
 	while ( have_posts() ) :
 		the_post();
 

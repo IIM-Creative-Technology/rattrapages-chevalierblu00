@@ -16,9 +16,10 @@ get_header();
 
 <?php while ($loop->have_posts() ): $loop->the_post(); ?>
 
-    <h2><?php the_title(); ?></h2>
+    <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
     <div class="entry-content">
-        <?php the_content();?>
+        <?php the_content(); ?>
+        
     </div>
 
 <?php endwhile; ?>
