@@ -15,3 +15,8 @@ etape 4:
 
 etape 5:
 -mise en place de la taxonomy dédiée dans le thème plus de modification de la page d'exemple pour verifier le bon fonctionnement a l'aide de cette video: https://grafikart.fr/tutoriels/wordpress-taxonomy-1266 et de ces sites: https://developer.wordpress.org/reference/functions/wp_list_categories/ , https://wpfr.net/support/sujet/lister-taxonomy-et-custom-taxonomie/
+
+etape 6:
+-mise en place de la page single ingrédients en recueprants les fonctions tester precedament sur des pages a part et en les combianant
+-je me suis aider de cette video pour la mise en place des pages genérée dynamiquement: https://www.oboqo.com/liens-dynamiques-php-wordpress/#:~:text=Pour%20cela%2C%20il%20suffit%20d,que%20le%20r%C3%A9sultat%20soit%20affich%C3%A9.
+
