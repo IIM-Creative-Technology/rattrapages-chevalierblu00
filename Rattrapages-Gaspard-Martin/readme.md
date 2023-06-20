@@ -1,22 +1,23 @@
-etape 1: 
--mise en place du projet et installation du wordpress en s'aidant du readme.html contenus dans le dossier wordpress
--ajout du thème blanc underscores en s'aidant de ce site: https://wpmarmite.com/installer-theme-wordpress/
+Étape 1:
 
-etape 2: 
--ajout du plugin CPT UI
--mise en place du custom post type ingrédients et une taxonomy type a l'aide de cette video:https://www.youtube.com/watch?v=ETmvJi59JsE&ab_channel=JonathanCOLIN-MesTutosWP
+Mise en place du projet et installation de WordPress en s'aidant du fichier readme.html contenu dans le dossier WordPress.
+Ajout du thème blanc "Underscores" en se référant à ce site : https://wpmarmite.com/installer-theme-wordpress/.
+Étape 2:
 
-etape 3:
--ajout du plugin ACF
--mise en place des champs ACF couleur et prix a l'aide de cette video: https://www.youtube.com/watch?v=8yJqolGqWf0&ab_channel=AdrienGazaix
+Ajout du plugin CPT UI.
+Mise en place du custom post type "ingrédients" et d'une taxonomie "type" en suivant cette vidéo : https://www.youtube.com/watch?v=ETmvJi59JsE&ab_channel=JonathanCOLIN-MesTutosWP.
+Étape 3:
 
-etape 4:
--mise en place de la page archive qui permet d'afficher les ingrédients rentrer via le custom post type a l'ai de la meme video que l'étape 2
+Ajout du plugin ACF.
+Mise en place des champs ACF "couleur" et "prix" en suivant cette vidéo : https://www.youtube.com/watch?v=8yJqolGqWf0&ab_channel=AdrienGazaix.
+Étape 4:
 
-etape 5:
--mise en place de la taxonomy dédiée dans le thème plus de modification de la page d'exemple pour verifier le bon fonctionnement a l'aide de cette video: https://grafikart.fr/tutoriels/wordpress-taxonomy-1266 et de ces sites: https://developer.wordpress.org/reference/functions/wp_list_categories/ , https://wpfr.net/support/sujet/lister-taxonomy-et-custom-taxonomie/
+Mise en place de la page d'archive qui permet d'afficher les ingrédients saisis via le custom post type en suivant la même vidéo que pour l'étape 2.
+Étape 5:
 
-etape 6:
--mise en place de la page single ingrédients en recueprants les fonctions tester precedament sur des pages a part et en les combianant
--je me suis aider de cette video pour la mise en place des pages genérée dynamiquement: https://www.oboqo.com/liens-dynamiques-php-wordpress/#:~:text=Pour%20cela%2C%20il%20suffit%20d,que%20le%20r%C3%A9sultat%20soit%20affich%C3%A9.
+Mise en place de la taxonomie dédiée dans le thème et modification de la page d'exemple pour vérifier le bon fonctionnement. Pour cela, j'ai utilisé cette vidéo : https://grafikart.fr/tutoriels/wordpress-taxonomy-1266 ainsi que ces sites : https://developer.wordpress.org/reference/functions/wp_list_categories/ et https://wpfr.net/support/sujet/lister-taxonomy-et-custom-taxonomie/.
+Étape 6:
+
+Mise en place de la page "single ingrédients" en récupérant les fonctions précédemment testées sur des pages séparées et en les combinant.
+J'ai suivi cette vidéo pour la mise en place des pages générées dynamiquement : https://www.oboqo.com/liens-dynamiques-php-wordpress/#:~:text=Pour%20cela%2C%20il%20suffit%20d,que%20le%20r%C3%A9sultat%20soit%20affich%C3%A9..
 
