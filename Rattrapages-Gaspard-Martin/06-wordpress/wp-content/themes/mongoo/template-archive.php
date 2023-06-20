@@ -12,16 +12,21 @@
 get_header();
 ?>
 
+<?php the_custom_logo(); ?>
+
 <?php $loop = new WP_Query(array('post_type' => 'ingredients', 'posts_per_page' => -1)); ?>
 
+<div class="colonne" >
 <?php while ($loop->have_posts() ): $loop->the_post(); ?>
 
-    <h2><a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a></h2>
+    <a href="<?php echo get_permalink(); ?>">
     <div class="entry-content">
         <?php the_content(); ?>
+        <h2><?php the_title(); ?></h2>
         
     </div>
+    </a>
 
 <?php endwhile; ?>
+</div>
 
-<?php get_footer(); ?>

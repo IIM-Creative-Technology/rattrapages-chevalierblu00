@@ -9,6 +9,18 @@
 
 ?>
 
+<nav id="site-navigation" class="main-navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mongoo' ); ?></button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location' => 'menu-1',
+					'menu_id'        => 'primary-menu',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+
 <?php
 if (!function_exists('get_field')) return;
 
@@ -18,31 +30,7 @@ $custom_field_2 = get_field('option_prix');
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php
-		if ( is_singular() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
-			// Utiliser les données récupérées dans votre contenu single
-		echo '<h2>' . $custom_field_1 . '</h2>';
-		echo '<p>' . $custom_field_2 . '</p>';
-		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-				mongoo_posted_on();
-				mongoo_posted_by();
-				?>
-			</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-
-	<?php
+<?php
 	// Récupérer l'ID de la page courante
 	$current_page_id = get_queried_object_id();
 
@@ -65,48 +53,55 @@ $custom_field_2 = get_field('option_prix');
 
 			$all_terms = array_merge( $terms_boissons, $terms_desserts, $terms_ingredients_salade, $terms_salades );
 
-			if ( ! empty( $all_terms ) && ! is_wp_error( $all_terms ) ) {
-				echo '<ul>';
-				foreach ( $all_terms as $term ) {
-					echo '<li>' . $term->name . '</li>';
-				}
-				echo '</ul>';
-			}
 		}
 	}
+
+	$nomVariable = array("Boissons", "Desserts", "Ingredients salade", "Salades");
 
 	// Réinitialisation de la requête principale de WordPress
 	wp_reset_postdata();
 	?>
 
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php
+		if ( is_singular() ) :
+			the_title( '<h1 class="entry-title">', '</h1>' );
+			// Utiliser les données récupérées dans votre contenu single
+		echo '<p>' . 'couleur : '. $custom_field_1 . '</p>';
+		echo '<p>' . 'prix : ' . $custom_field_2 . '</p>';
+			echo '<ul>';
+			for ($i = 0; $i < count($all_terms); $i++) {
+				echo '<li>' . $nomVariable[$i] . ': ' . $all_terms[$i]->name . '</li>';
+			}
+			echo '</ul>';
+
+			the_post_navigation(
+				array(
+					'prev_text' => '<span class="nav-subtitle">' . esc_html__( 'Previous:', 'mongoo' ) . '</span> <span class="nav-title">%title</span>',
+					'next_text' => '<span class="nav-subtitle">' . esc_html__( 'Next:', 'mongoo' ) . '</span> <span class="nav-title">%title</span>',
+				)
+			);
+
+		else :
+			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		endif;
+
+		if ( 'post' === get_post_type() ) :
+			?>
+			<div class="entry-meta">
+				<?php
+				mongoo_posted_on();
+				mongoo_posted_by();
+				?>
+			</div><!-- .entry-meta -->
+		<?php endif; ?>
+	</header><!-- .entry-header -->
+
 	<?php mongoo_post_thumbnail(); ?>
 
-	<div class="entry-content">
-		<?php
-		the_content(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'mongoo' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				wp_kses_post( get_the_title() )
-			)
-		);
-
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'mongoo' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
-	</div><!-- .entry-content -->
+	
 
 	<footer class="entry-footer">
 		<?php mongoo_entry_footer(); ?>
