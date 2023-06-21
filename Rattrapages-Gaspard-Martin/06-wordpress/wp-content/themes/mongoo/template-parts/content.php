@@ -10,7 +10,7 @@
 ?>
 
 <nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'mongoo' ); ?></button>
+			
 			<?php
 			wp_nav_menu(
 				array(
@@ -56,10 +56,8 @@ $custom_field_2 = get_field('option_prix');
 		}
 	}
 
-	$nomVariable = array("Boissons", "Desserts", "Ingredients salade", "Salades");
+	$nomVariable = array("Boissons", "Desserts", "Ingrédients salade", "Salades");
 
-	// Réinitialisation de la requête principale de WordPress
-	wp_reset_postdata();
 	?>
 
 

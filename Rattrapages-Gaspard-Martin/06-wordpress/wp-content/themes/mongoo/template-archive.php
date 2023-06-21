@@ -29,4 +29,3 @@ get_header();
 
 <?php endwhile; ?>
 </div>
-
