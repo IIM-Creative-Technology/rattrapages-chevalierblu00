@@ -61,7 +61,7 @@ $custom_field_2 = get_field('option_prix');
 			echo '<p>' . 'prix : ' . $custom_field_2 . '€' . '</p>';
 			echo '<ul>';
 			for ($i = 0; $i < count($all_terms); $i++) {
-				echo '<li>' . $all_terms[$i]->f . '</li>';
+				echo '<li>' . $all_terms[$i]->name. '</li>';
 			}
 			echo '</ul>';
 
