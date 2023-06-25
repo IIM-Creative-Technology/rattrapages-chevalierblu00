@@ -1,3 +1,13 @@
+mise en place:
+administrateur:
+user: admin
+mot de passe: MJ5e1z3m4v3Ye!ORQH
+
+base de données:
+data base:rattrapage
+id: root
+mp:
+
 Étape 1:
 
 -Mise en place du projet et installation de WordPress en s'aidant du fichier readme.html contenu dans le dossier WordPress.
@@ -24,6 +34,9 @@
 Étape 5:
 
 -Mise en place de la taxonomie dédiée dans le thème et modification de la page d'exemple pour vérifier le bon fonctionnement. Pour cela, j'ai utilisé cette vidéo : https://grafikart.fr/tutoriels/wordpress-taxonomy-1266 ainsi que ces sites : https://developer.wordpress.org/reference/functions/wp_list_categories/ et https://wpfr.net/support/sujet/lister-taxonomy-et-custom-taxonomie/.
+
+video explication:
+https://www.youtube.com/watch?v=8uKAbXXUqkc&ab_channel=MartinGASPARD
 
 
 Étape 6:
