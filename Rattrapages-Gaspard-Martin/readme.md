@@ -44,3 +44,7 @@ https://www.youtube.com/watch?v=8uKAbXXUqkc&ab_channel=MartinGASPARD
 -Mise en place de la page "single ingrédients" en récupérant les fonctions précédemment testées sur des pages séparées et en les combinant.
 -J'ai suivi cette vidéo pour la mise en place des pages générées dynamiquement : https://www.oboqo.com/liens-dynamiques-php-wordpress/#:~:text=Pour%20cela%2C%20il%20suffit%20d,que%20le%20r%C3%A9sultat%20soit%20affich%C3%A9..
 
+video explication:
+https://www.youtube.com/watch?v=8uKAbXXUqkc&ab_channel=MartinGASPARD
+
+
