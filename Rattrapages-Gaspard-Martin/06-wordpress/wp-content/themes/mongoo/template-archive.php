@@ -18,14 +18,13 @@ get_header();
 
 <div class="colonne" >
 <?php while ($loop->have_posts() ): $loop->the_post(); ?>
-
-    <a href="<?php echo get_permalink(); ?>">
+    
     <div class="entry-content">
         <?php the_content(); ?>
-        <h2><?php the_title(); ?></h2>
-        
+        <h2> <a href="<?php echo get_permalink(); ?>"> <?php the_title(); ?> </a></h2>
     </div>
-    </a>
 
 <?php endwhile; ?>
 </div>
+
+<?php wp_reset_postdata(); ?>

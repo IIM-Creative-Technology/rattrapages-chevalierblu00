@@ -10,35 +10,30 @@
 ?>
 
 <nav id="site-navigation" class="main-navigation">
-			
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
-		</nav><!-- #site-navigation -->
+	<?php
+	wp_nav_menu(
+		array(
+			'theme_location' => 'menu-1',
+			'menu_id'        => 'primary-menu',
+		)
+	);
+	?>
+</nav><!-- #site-navigation -->
 
 <?php
 if (!function_exists('get_field')) return;
 
-// Récupérer les données ACF spécifiques à votre CPT
 $custom_field_1 = get_field('option_couleur');
 $custom_field_2 = get_field('option_prix');
-
 ?>
 
 <?php
-	// Récupérer l'ID de la page courante
 	$current_page_id = get_queried_object_id();
 
-	// Récupérer les articles du type de contenu personnalisé "ingredients"
 	$args = array(
-		'post_type'      => 'ingredients', // Remplacez "ingredients" par le slug de votre type de contenu personnalisé
-		'posts_per_page' => -1, // Récupérer tous les articles
-		'post__in'       => array( $current_page_id ), // Utiliser l'ID de la page courante
+		'post_type'      => 'ingredients',
+		'posts_per_page' => -1, 
+		'post__in'       => array( $current_page_id ), 
 	);
 
 	$query = new WP_Query( $args );
@@ -56,22 +51,17 @@ $custom_field_2 = get_field('option_prix');
 		}
 	}
 
-	$nomVariable = array("Boissons", "Desserts", "Ingrédients salade", "Salades");
-
 	?>
 
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
+<header class="entry-header" style="background-color: <?php echo $custom_field_1; ?>">
 		<?php
 		if ( is_singular() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
-			// Utiliser les données récupérées dans votre contenu single
-		echo '<p>' . 'couleur : '. $custom_field_1 . '</p>';
-		echo '<p>' . 'prix : ' . $custom_field_2 . '</p>';
+			echo '<p>' . 'prix : ' . $custom_field_2 . '€' . '</p>';
 			echo '<ul>';
 			for ($i = 0; $i < count($all_terms); $i++) {
-				echo '<li>' . $nomVariable[$i] . ': ' . $all_terms[$i]->name . '</li>';
+				echo '<li>' . $all_terms[$i]->f . '</li>';
 			}
 			echo '</ul>';
 
@@ -98,8 +88,6 @@ $custom_field_2 = get_field('option_prix');
 	</header><!-- .entry-header -->
 
 	<?php mongoo_post_thumbnail(); ?>
-
-	
 
 	<footer class="entry-footer">
 		<?php mongoo_entry_footer(); ?>
